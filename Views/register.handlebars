@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>{{title}}</title>
+</head>
+<body>
+  {{> header title="Join the Blogging Community"}}
+  <main class="form-container">
+    <form id="register-form" class="form">
+      <h2>Register</h2>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+      <input type="text" id="real-name" placeholder="Full Name" required>
+      <input type="date" id="dob" required>
+      <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="/login">Login here</a></p>
+    </form>
+  </main>
+  <script src="/scripts/auth.js"></script>
+</body>
+</html>

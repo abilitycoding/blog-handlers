@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {{> header title="Explore Articles"}}
+    <main>
+      <section class="articles-list" id="articles-list">
+        {{#each articles}}
+        <div class="article">
+          <h3>{{title}}</h3>
+          <p>{{content}}</p>
+          <button onclick="likeArticle({{id}})">Like ({{likes}})</button>
+          <button onclick="viewComments({{id}})">View Comments</button>
+        </div>
+        {{/each}}
+      </section>
+      <section class="add-article">
+        <h2>Add a New Article</h2>
+        <form id="article-form">
+          <input
+            type="text"
+            id="article-title"
+            placeholder="Enter Title"
+            required
+          />
+          <textarea
+            id="article-content"
+            placeholder="Write your content here..."
+            required
+          ></textarea>
+          <button type="submit">Publish Article</button>
+        </form>
+      </section>
+    </main>
+    <script src="/scripts/articles.js"></script>
+  </body>
+</html>

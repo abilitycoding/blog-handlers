@@ -1,0 +1,236 @@
+/* General Styles */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header button,
+.header-comments button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover,
+.header-comments button:hover {
+  background-color: #e64a19;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles (Login, Register, Add Comment, Add Article) */
+.form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+input,
+textarea,
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+/* Articles List */
+.articles-list .article,
+#comments-list .comment {
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.articles-list .article:hover,
+#comments-list .comment:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.articles-list .article h3,
+#comments-list .comment h4 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.articles-list .article p,
+#comments-list .comment p {
+  margin: 10px 0;
+  color: #6c757d;
+}
+
+.articles-list .article button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.articles-list .article button:hover {
+  background-color: #0056b3;
+}
+
+/* Add Comment Form */
+.add-comment {
+  margin-top: 2rem;
+}
+
+.add-comment h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #343a40;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Alerts */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+  animation: fadeInOut 4s ease-in-out;
+}
+
+.alert.success {
+  background-color: #28a745;
+}
+
+.alert.error {
+  background-color: #dc3545;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  header button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
